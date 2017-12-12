@@ -6,8 +6,14 @@ function Sandwich(bread, ingredients, name) {
   this.name = name;
 }
 
-function serve(customer) {
-  console.log("Hey " + customer + ", here's your " + this.name + ", enjoy!");
+function serve() {
+    if(arguments.length > 0) {
+        var customers = Array.prototype.slice.call(arguments);
+        last = customers.pop();
+        console.log(this.name + " for " + customers.join(", ") + " and " + last + ". Enjoy!");
+    }else {
+        console.log(this.name + ". Order up!");
+    }
 }
 
 var gc = new Sandwich("white", ["cheese"], "Grilled Cheese");
