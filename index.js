@@ -6,8 +6,8 @@ function Sandwich(bread, ingredients, name) {
   this.name = name;
 }
 
-function serve() {
-  console.log("here's your " + this.name + ", enjoy!");
+function serve(customer) {
+  console.log("Hey " + customer + ", here's your " + this.name + ", enjoy!");
 }
 
 var gc = new Sandwich("white", ["cheese"], "Grilled Cheese");
