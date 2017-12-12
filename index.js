@@ -12,3 +12,6 @@ function serve() {
 
 var gc = new Sandwich("white", ["cheese"], "Grilled Cheese");
 var pbj = new Sandwich("wheat", ["peanut butter", "raspberry jam"], "Peanut Butter & Jelly");
+
+serve.call(gc);
+serve.call(pbj);
