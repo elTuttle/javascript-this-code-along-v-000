@@ -25,3 +25,6 @@ function deliverFood(customer, table) {
 
 deliverFood.call(gc, "Terry", "4");
 deliverFood.apply(pbj, ["Jesse", "15"]);
+
+serve.call(gc);
+serve.apply(pbj, ["Terry", "Tom", "Tabitha"]);
