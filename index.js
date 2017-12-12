@@ -13,5 +13,9 @@ function serve(customer) {
 var gc = new Sandwich("white", ["cheese"], "Grilled Cheese");
 var pbj = new Sandwich("wheat", ["peanut butter", "raspberry jam"], "Peanut Butter & Jelly");
 
-serve.call(gc);
-serve.call(pbj);
+function deliverFood(customer, table) {
+  console.log("Delivering " + this.name + " to " + customer + " at table " + table);
+}
+
+deliverFood.call(gc, "Terry", "4");
+deliverFood.apply(pbj, ["Jesse", "15"]);
